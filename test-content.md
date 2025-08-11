@@ -26,4 +26,4 @@ This is another subsection.
 
 This is an edit by an external contributor
 
-PR check test
+PR auto-merge test
