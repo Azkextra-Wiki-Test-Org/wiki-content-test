@@ -23,3 +23,5 @@ This is another subsection.
   - Something
 - With
   - It
+
+This is an edit by an external contributor
