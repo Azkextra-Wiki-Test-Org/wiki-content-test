@@ -26,4 +26,4 @@ This is another subsection.
 
 This is an edit by an external contributor
 
-PR auto-merge test
+PR auto-merge message test
