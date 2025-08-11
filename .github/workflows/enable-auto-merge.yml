@@ -7,11 +7,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  dependabot:
+  enable-auto-merge:
     runs-on: ubuntu-latest
     steps:
       - name: Enable auto-merge for PRs
-        run: gh pr merge --auto --squash --delete-branch --subject="$PR_TITLE" --body="$PR_CREATED_AT \n $PR_URL \n $PR_BODY" "$PR_URL"
+        run: echo -e "$PR_CREATED_AT \n $PR_URL \n $PR_BODY" | gh pr merge --auto --squash --delete-branch --subject="$PR_TITLE" --body-file - "$PR_URL"
         env:
           PR_TITLE: ${{github.event.pull_request.title}}
           PR_BODY: ${{github.event.pull_request.body}}
